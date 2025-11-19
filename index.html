@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pratik Mahalle</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              gh: {
+                bg: 'var(--gh-bg)',
+                card: 'var(--gh-card)',
+                border: 'var(--gh-border)',
+                text: 'var(--gh-text)',
+                secondary: 'var(--gh-text-secondary)', // Mapped from 'muted' concept
+                muted: 'var(--gh-text-secondary)', // Alias for backward compat
+                link: 'var(--gh-link)',
+                btn: 'var(--gh-btn)',
+                btnHover: 'var(--gh-btn-hover)',
+                green: 'var(--gh-green)',
+                greenHover: 'var(--gh-green-hover)',
+                header: 'var(--gh-header-bg)',
+                headerText: 'var(--gh-header-text)',
+                input: 'var(--gh-input-bg)',
+                contrib: {
+                  0: 'var(--gh-contrib-0)',
+                  1: 'var(--gh-contrib-1)',
+                  2: 'var(--gh-contrib-2)',
+                  3: 'var(--gh-contrib-3)',
+                  4: 'var(--gh-contrib-4)',
+                }
+              }
+            },
+            fontFamily: {
+              sans: ['-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Helvetica', 'Arial', 'sans-serif', '"Apple Color Emoji"', '"Segoe UI Emoji"'],
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      :root {
+        /* Light Mode Defaults */
+        --gh-bg: #ffffff;
+        --gh-card: #f6f8fa;
+        --gh-border: #d0d7de;
+        --gh-text: #1f2328;
+        --gh-text-secondary: #656d76;
+        --gh-link: #0969da;
+        --gh-btn: #f6f8fa;
+        --gh-btn-hover: #f3f4f6;
+        --gh-green: #1f883d;
+        --gh-green-hover: #1a7f37;
+        --gh-header-bg: #f6f8fa;
+        --gh-header-text: #24292f;
+        --gh-input-bg: #ffffff;
+        
+        /* Contribution Colors Light */
+        --gh-contrib-0: #ebedf0;
+        --gh-contrib-1: #9be9a8;
+        --gh-contrib-2: #40c463;
+        --gh-contrib-3: #30a14e;
+        --gh-contrib-4: #216e39;
+      }
+
+      .dark {
+        /* Dark Mode Overrides */
+        --gh-bg: #0d1117;
+        --gh-card: #161b22;
+        --gh-border: #30363d;
+        --gh-text: #e6edf3;
+        --gh-text-secondary: #848d97;
+        --gh-link: #58a6ff;
+        --gh-btn: #21262d;
+        --gh-btn-hover: #30363d;
+        --gh-green: #238636;
+        --gh-green-hover: #2ea043;
+        --gh-header-bg: #010409;
+        --gh-header-text: #f0f6fc;
+        --gh-input-bg: #0d1117;
+
+        /* Contribution Colors Dark */
+        --gh-contrib-0: #161b22;
+        --gh-contrib-1: #0e4429;
+        --gh-contrib-2: #006d32;
+        --gh-contrib-3: #26a641;
+        --gh-contrib-4: #39d353;
+      }
+
+      body {
+        background-color: var(--gh-bg);
+        color: var(--gh-text);
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+      
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 12px;
+      }
+      ::-webkit-scrollbar-track {
+        background: var(--gh-bg); 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: var(--gh-border); 
+        border-radius: 6px;
+        border: 3px solid var(--gh-bg);
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--gh-text-secondary); 
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
