@@ -37,6 +37,26 @@ const Sidebar: React.FC = () => {
         <button className="w-full bg-gh-btn border border-gh-border text-gh-text rounded-md py-1.5 font-medium text-sm hover:bg-gh-btnHover transition-colors mb-4">
           Edit profile
         </button>
+        
+        {USER_PROFILE.currentBuild && (
+          <div className="mb-4 border border-gh-border rounded-md p-3 bg-gh-bg shadow-sm">
+            <h3 className="text-xs font-bold text-gh-muted mb-2 uppercase tracking-wider">Currently building</h3>
+            <div className="flex flex-col gap-2">
+               <a href={USER_PROFILE.currentBuild.link} target="_blank" rel="noreferrer" className="font-semibold text-gh-text hover:text-gh-link hover:underline flex items-center gap-1">
+                 <span className="w-2 h-2 rounded-full bg-yellow-500"></span>
+                 {USER_PROFILE.currentBuild.name}
+               </a>
+               <p className="text-xs text-gh-text">
+                 {USER_PROFILE.currentBuild.description}
+               </p>
+               <div className="flex flex-wrap gap-1 mt-1">
+                  {USER_PROFILE.currentBuild.tags.map(tag => (
+                    <span key={tag} className="text-[10px] px-1.5 py-0.5 bg-gh-card border border-gh-border rounded-full text-gh-muted font-medium">{tag}</span>
+                  ))}
+               </div>
+            </div>
+          </div>
+        )}
       </div>
 
       <div className="flex items-center justify-center md:justify-start gap-1 text-gh-muted text-sm px-2 md:px-0 mb-4">

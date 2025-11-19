@@ -22,6 +22,19 @@ const ProfileReadme: React.FC = () => {
                 I specialize in building scalable cloud infrastructure using Go, Terraform, and Kubernetes.
             </p>
 
+            {USER_PROFILE.currentBuild && (
+                <div className="mb-8">
+                    <h3 className="text-lg font-bold text-gh-text flex items-center gap-2 mb-2">
+                        🔭 I’m currently working on...
+                    </h3>
+                    <p className="text-gh-text">
+                        <a href={USER_PROFILE.currentBuild.link} className="font-semibold text-gh-link hover:underline">
+                            {USER_PROFILE.currentBuild.name}
+                        </a> - {USER_PROFILE.currentBuild.description}
+                    </p>
+                </div>
+            )}
+
             <h3 className="text-lg font-bold text-gh-text flex items-center gap-2 mb-4">
                 <Server size={20} className="text-gh-muted" /> Work Experience
             </h3>

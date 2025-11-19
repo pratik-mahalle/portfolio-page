@@ -42,4 +42,10 @@ export interface UserProfile {
     followers: number;
     following: number;
   };
+  currentBuild?: {
+    name: string;
+    description: string;
+    tags: string[];
+    link?: string;
+  };
 }

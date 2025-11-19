@@ -18,6 +18,12 @@ export const USER_PROFILE: UserProfile = {
   stats: {
     followers: 128,
     following: 45
+  },
+  currentBuild: {
+    name: "InfraAudit",
+    description: "Cloud cost optimization platform identifying unused/misconfigured resources.",
+    tags: ["Go", "Terraform", "AWS"],
+    link: "https://github.com/pratik-mahalle/InfraAudit"
   }
 };
 
