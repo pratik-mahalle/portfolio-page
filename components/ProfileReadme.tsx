@@ -18,8 +18,8 @@ const ProfileReadme: React.FC = () => {
         
         <div className="prose prose-invert max-w-none">
             <p className="mb-6 text-gh-text">
-                I'm a <b>Cloud DevOps Engineer</b> and <b>Open Source Enthusiast</b> based in Nagpur, India. 
-                I specialize in building scalable cloud infrastructure using Go, Terraform, and Kubernetes.
+                I'm a <b>Developer Advocate</b> and <b>Cloud DevOps Engineer</b> based in Nagpur, India. 
+                I also create content on YouTube and X, and specialize in building scalable cloud infrastructure using Go, Terraform, and Kubernetes.
             </p>
 
             {USER_PROFILE.currentBuild && (

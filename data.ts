@@ -4,8 +4,7 @@ export const USER_PROFILE: UserProfile = {
   name: "Pratik Mahalle",
   username: "pratik-mahalle",
   avatarUrl: "https://github.com/pratik-mahalle.png",
-  bio: "Cloud DevOps Engineer | CNCF Organizer | AWS Community Builder. Passionate about Cloud Native, Go, and Infrastructure as Code.",
-  company: "Keploy",
+  bio: "Developer Advocate | Cloud DevOps Engineer | Content Creator (YouTube & X). Passionate about Cloud Native, Go, and Infrastructure as Code.",
   email: "pratik.mahalle@outlook.com",
   phone: "+91 93223 38943",
   location: "Nagpur, India",
@@ -31,7 +30,7 @@ export const EXPERIENCES: Experience[] = [
   {
     role: "DevRel Intern",
     company: "Keploy",
-    period: "June 2025 - Present",
+    period: "June 2025 - Oct 2025",
     description: [
       "Engaging with developer communities by creating educational content including blogs, workshops, demos, and presentations focused on API testing and open source tools.",
       "Collected developer feedback that influenced product roadmap, improving onboarding time by 30%.",
