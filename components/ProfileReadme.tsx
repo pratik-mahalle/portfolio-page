@@ -1,6 +1,6 @@
 import React from 'react';
 import { EXPERIENCES, SKILLS, USER_PROFILE } from '../data';
-import { BookOpen, Code, Server, Cloud, Mail } from 'lucide-react';
+import { BookOpen, Code, Server, Cloud, Mail, Youtube } from 'lucide-react';
 
 const ProfileReadme: React.FC = () => {
   return (
@@ -32,6 +32,34 @@ const ProfileReadme: React.FC = () => {
                             {USER_PROFILE.currentBuild.name}
                         </a> - {USER_PROFILE.currentBuild.description}
                     </p>
+                </div>
+            )}
+
+            {USER_PROFILE.latestYoutubeVideo && (
+                <div className="mb-8">
+                    <h3 className="text-lg font-bold text-gh-text flex items-center gap-2 mb-4">
+                        <Youtube size={20} className="text-red-500" /> Latest YouTube Video
+                    </h3>
+                    <div className="border border-gh-border rounded-md overflow-hidden bg-gh-card hover:bg-gh-bg transition-colors group">
+                        <a href={USER_PROFILE.latestYoutubeVideo.url} target="_blank" rel="noreferrer" className="flex flex-col md:flex-row gap-4 p-4">
+                            <div className="relative aspect-video w-full md:w-64 flex-shrink-0 rounded-md overflow-hidden bg-gray-900">
+                                <img 
+                                    src={USER_PROFILE.latestYoutubeVideo.thumbnail} 
+                                    alt={USER_PROFILE.latestYoutubeVideo.title}
+                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                />
+                                <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/10 transition-colors">
+                                    <div className="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center shadow-lg">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="translate-x-0.5"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="flex flex-col justify-center">
+                                <h4 className="font-bold text-gh-text text-base mb-1 group-hover:text-gh-link">{USER_PROFILE.latestYoutubeVideo.title}</h4>
+                                <p className="text-sm text-gh-muted">Watch on YouTube ↗</p>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             )}
 

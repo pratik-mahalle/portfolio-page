@@ -37,6 +37,7 @@ export interface UserProfile {
     github: string;
     linkedin: string;
     twitter?: string;
+    youtube?: string;
   };
   stats: {
     followers: number;
@@ -47,5 +48,10 @@ export interface UserProfile {
     description: string;
     tags: string[];
     link?: string;
+  };
+  latestYoutubeVideo?: {
+    title: string;
+    url: string;
+    thumbnail: string;
   };
 }

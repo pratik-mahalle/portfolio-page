@@ -1,4 +1,5 @@
 import { Experience, Project, UserProfile } from './types';
+import latestVideo from './latest-video.json';
 
 export const USER_PROFILE: UserProfile = {
   name: "Pratik Mahalle",
@@ -12,7 +13,8 @@ export const USER_PROFILE: UserProfile = {
   socials: {
     github: "https://github.com/pratik-mahalle",
     linkedin: "https://linkedin.com/in/mahalle-pratik",
-    twitter: "https://x.com/pratikstwts"
+    twitter: "https://x.com/pratikstwts",
+    youtube: "https://youtube.com/@thedevopsduo"
   },
   stats: {
     followers: 128,
@@ -23,7 +25,8 @@ export const USER_PROFILE: UserProfile = {
     description: "Cloud cost optimization platform identifying unused/misconfigured resources.",
     tags: ["Go", "Terraform", "AWS"],
     link: "https://github.com/pratik-mahalle/InfraAudit"
-  }
+  },
+  latestYoutubeVideo: latestVideo
 };
 
 export const EXPERIENCES: Experience[] = [

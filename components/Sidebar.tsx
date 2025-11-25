@@ -1,5 +1,5 @@
 import React from 'react';
-import { Users, MapPin, Link as LinkIcon, Mail, Building2, Github, Linkedin, Twitter, Globe } from 'lucide-react';
+import { Users, MapPin, Link as LinkIcon, Mail, Building2, Github, Linkedin, Twitter, Globe, Youtube } from 'lucide-react';
 import { USER_PROFILE, CERTIFICATIONS } from '../data';
 
 const Sidebar: React.FC = () => {
@@ -106,6 +106,14 @@ const Sidebar: React.FC = () => {
             <Twitter size={16} className="text-gh-muted" />
             <a href={USER_PROFILE.socials.twitter} target="_blank" rel="noreferrer" className="hover:text-gh-link hover:underline truncate">
               @pratikstwts
+            </a>
+          </div>
+        )}
+        {USER_PROFILE.socials.youtube && (
+          <div className="flex items-center gap-2">
+            <Youtube size={16} className="text-gh-muted" />
+            <a href={USER_PROFILE.socials.youtube} target="_blank" rel="noreferrer" className="hover:text-gh-link hover:underline truncate">
+              YouTube Channel
             </a>
           </div>
         )}
